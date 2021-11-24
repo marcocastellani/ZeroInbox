@@ -1,0 +1,21 @@
+{
+    "appName": "ZeroInbox",
+    "projectId": "33fc4219-92f4-44ca-a307-f452a8ef8a9c",
+    "solutionSettings": {
+        "name": "fx-solution-azure",
+        "version": "1.0.0",
+        "hostType": "SPFx",
+        "azureResources": [],
+        "capabilities": [
+            "Tab"
+        ],
+        "activeResourcePlugins": [
+            "fx-resource-spfx",
+            "fx-resource-local-debug",
+            "fx-resource-appstudio"
+        ]
+    },
+    "version": "1.0.0",
+    "isFromSample": false,
+    "programmingLanguage": "typescript"
+}

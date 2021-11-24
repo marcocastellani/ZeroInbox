@@ -1,0 +1,19 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+    "version": "2.0",
+    "bundles": {
+      "zero-inbox-web-part": {
+        "components": [
+          {
+            "entrypoint": "./lib/webparts/zeroInbox/ZeroInboxWebPart.js",
+            "manifest": "./src/webparts/zeroInbox/ZeroInboxWebPart.manifest.json"
+          }
+        ]
+      }
+    },
+    "externals": {},
+    "localizedResources": {
+      "ZeroInboxWebPartStrings": "lib/webparts/zeroInbox/loc/{locale}.js"
+    }
+  }
+  
