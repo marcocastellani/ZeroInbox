@@ -14,12 +14,17 @@ const Riga = (props) => {
   return (
     <>
       <ThemeProvider>
-        <Stack horizontal tokens={innerStackTokens} horizontalAlign="center">
+        <Stack horizontal tokens={innerStackTokens}>
           <Stack.Item>
             <Person personQuery={email.sender.emailAddress.address}></Person>
           </Stack.Item>
 
-          <Stack.Item>{email.subject}</Stack.Item>
+          <Stack.Item>
+            <a href={email.webLink} target="_blank" rel="noorigin">
+              {" "}
+              {email.subject}
+            </a>
+          </Stack.Item>
         </Stack>
       </ThemeProvider>
     </>
@@ -30,14 +35,18 @@ export default class ZeroInbox extends React.Component<IZeroInboxProps, {}> {
   public render(): React.ReactElement<IZeroInboxProps> {
     return (
       <>
-        <h1>TODO</h1>
-        <Get resource="/me/messages?$filter=categories/any(c:c eq 'TODO')&$select=sender,subject">
-          <Riga template="value"></Riga>
-        </Get>
-        <h1>TOREAD</h1>
-        <Get resource="/me/messages?$filter=categories/any(c:c eq 'TOREAD')">
-          <Riga template="value"></Riga>
-        </Get>
+        <div className={styles.minibox}>
+          <h1 className={styles.label1}>TODO</h1>
+          <Get resource="/me/messages?$filter=categories/any(c:c eq 'TODO')&$select=sender,subject,webLink">
+            <Riga template="value"></Riga>
+          </Get>
+        </div>
+        <div className={styles.minibox}>
+          <h1 className={styles.label1}>TOREAD</h1>
+          <Get resource="/me/messages?$filter=categories/any(c:c eq 'TOREAD')">
+            <Riga template="value"></Riga>
+          </Get>
+        </div>
       </>
     );
   }

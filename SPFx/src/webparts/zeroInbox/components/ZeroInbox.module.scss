@@ -1,4 +1,4 @@
-@import '~office-ui-fabric-react/dist/sass/References.scss';
+@import "~office-ui-fabric-react/dist/sass/References.scss";
 
 .zeroInbox {
   .container {
@@ -51,7 +51,7 @@
     // Basic Button
     outline: transparent;
     position: relative;
-    font-family: "Segoe UI WestEuropean","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+    font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     font-size: $ms-font-size-m;
     font-weight: $ms-font-weight-regular;
@@ -71,4 +71,20 @@
       display: inline-block;
     }
   }
+}
+.label1 {
+  color: #d9801b !important;
+  display: block;
+  padding: 10px;
+}
+.minibox {
+  border: 1px solid #fafafa;
+  -webkit-box-shadow: 0px 5px 15px -8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 15px -8px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+
+.minibox a {
+  color: black;
+  text-decoration: none;
 }
