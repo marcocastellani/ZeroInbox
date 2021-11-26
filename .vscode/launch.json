@@ -68,7 +68,7 @@
       "name": "Hosted workbench (Chrome)",
       "type": "pwa-chrome",
       "request": "launch",
-      "url": "https://enter-your-SharePoint-site/_layouts/workbench.aspx",
+      "url": "https://giunecosrl.sharepoint.com/_layouts/workbench.aspx",
       "webRoot": "${workspaceRoot}/SPFx",
       "sourceMaps": true,
       "sourceMapPathOverrides": {

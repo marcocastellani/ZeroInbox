@@ -21,7 +21,6 @@ const Riga = (props) => {
 
           <Stack.Item>
             <a href={email.webLink} target="_blank" rel="noorigin">
-              {" "}
               {email.subject}
             </a>
           </Stack.Item>
@@ -43,7 +42,7 @@ export default class ZeroInbox extends React.Component<IZeroInboxProps, {}> {
         </div>
         <div className={styles.minibox}>
           <h1 className={styles.label1}>TOREAD</h1>
-          <Get resource="/me/messages?$filter=categories/any(c:c eq 'TOREAD')">
+          <Get resource="/me/messages?$filter=categories/any(c:c eq 'TOREAD')&$select=sender,subject,webLink">
             <Riga template="value"></Riga>
           </Get>
         </div>
